@@ -6,10 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashbaord.component.scss']
 })
 export class DashbaordComponent implements OnInit {
+	
+    loading: boolean = true;
+	home: boolean = false;
+	about: boolean = false;
+	gallery: boolean = false;
+	contact: boolean = false;
 
-  constructor() { }
+    error: any = null;
 
-  ngOnInit(): void {
-  }
+    constructor() 
+	{ 
+		this.loading = true;
+	}
 
+    ngOnInit(): void {
+		this.loading = false;
+		this.home = true;
+		
+    }
 }

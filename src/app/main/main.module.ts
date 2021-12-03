@@ -5,10 +5,12 @@ import { ContactComponent } from './contact/contact.component';
 import { DashbaordComponent } from './dashbaord/dashbaord.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
     imports: [
-        SharedModule
+        SharedModule,
+        CommonModule
     ],
     declarations: [
         AboutComponent,

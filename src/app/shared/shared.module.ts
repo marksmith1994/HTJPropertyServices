@@ -4,6 +4,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule, HttpClientXsrfModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { LoadingMaskComponent } from './loading-mask/loading-mask.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
     imports:[
@@ -13,15 +15,18 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
             headerName: 'X-XSRF-TOKEN',
         }),
         MatCardModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        CommonModule
     ],
     declarations:[
         HeaderComponent, 
-        FooterComponent
+        FooterComponent, 
+        LoadingMaskComponent
     ],
     exports:[
         HeaderComponent,
         FooterComponent,
+        LoadingMaskComponent,
         MatCardModule,
         MatProgressSpinnerModule
     ],

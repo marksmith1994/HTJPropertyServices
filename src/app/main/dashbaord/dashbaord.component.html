@@ -1,6 +1,14 @@
 <app-header></app-header>
-    <app-home></app-home>
-    <app-about></app-about>
-    <app-gallery></app-gallery>
-    <app-contact></app-contact>
+
+    <app-loading-mask [loading]="loading" [error]="error">
+        
+        <ng-template>
+            <app-home *ngIf="home"></app-home>
+            <app-about *ngIf="about"></app-about>
+            <app-gallery *ngIf="gallery"></app-gallery>
+            <app-contact *ngIf="contact"></app-contact>
+        </ng-template>
+
+    </app-loading-mask>
+
 <app-footer></app-footer>

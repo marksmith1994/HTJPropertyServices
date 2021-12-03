@@ -1,0 +1,9 @@
+<div class="spinner-container" *ngIf="loading || error" [class.fill]="fill">
+    <mat-spinner diameter="50" strokeWidth="1" *ngIf="loading && !error"></mat-spinner>
+    <span class="error" *ngIf="error">
+        <span>Content failed to load.</span>
+    </span>
+</div>
+<div *ngIf="!loading && !error">
+    <ng-content *ngTemplateOutlet="content"></ng-content>
+</div>
