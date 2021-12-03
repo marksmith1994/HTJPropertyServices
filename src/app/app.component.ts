@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'HTJPropertyServices';
+	loading: boolean = true;
+
+	onActivate() {
+		window.scroll(0, 0);
+		this.loading = false;
+	}
+
+	title = 'HTJPropertyServices';
 }
