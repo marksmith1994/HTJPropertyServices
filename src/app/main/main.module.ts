@@ -6,6 +6,9 @@ import { DashbaordComponent } from './dashbaord/dashbaord.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
 import { CommonModule } from '@angular/common';
+import { GreetingComponent } from './home/greeting/greeting.component';
+import { InfoBlockComponent } from './home/info-block/info-block.component';
+import { AdvertBlockComponent } from './home/advert-block/advert-block.component';
 
 @NgModule({
     imports: [
@@ -17,7 +20,10 @@ import { CommonModule } from '@angular/common';
         ContactComponent,
         DashbaordComponent,
         GalleryComponent,
-        HomeComponent
+        HomeComponent,
+        GreetingComponent,
+        InfoBlockComponent,
+        AdvertBlockComponent
     ],
     exports: [
         AboutComponent,

@@ -6,6 +6,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { LoadingMaskComponent } from './loading-mask/loading-mask.component';
 import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
+import { HeroComponent } from './hero/hero.component';
+import { ContactBoxComponent } from './contact-box/contact-box.component';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 @NgModule({
     imports:[
@@ -16,19 +20,27 @@ import { CommonModule } from '@angular/common';
         }),
         MatCardModule,
         MatProgressSpinnerModule,
-        CommonModule
+        CommonModule,
+        MatIconModule,
+        NgImageSliderModule        
     ],
     declarations:[
         HeaderComponent, 
         FooterComponent, 
-        LoadingMaskComponent
+        LoadingMaskComponent, 
+        HeroComponent, 
+        ContactBoxComponent
+        
     ],
     exports:[
         HeaderComponent,
         FooterComponent,
         LoadingMaskComponent,
         MatCardModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        MatIconModule,
+        ContactBoxComponent,
+        NgImageSliderModule
     ],
     providers:[]
 })

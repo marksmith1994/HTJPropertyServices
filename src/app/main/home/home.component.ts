@@ -5,11 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class HomeComponent {
+	imageObject = [{
+		image: 'https://www.htjpropertyservices.co.uk/images/kitchen-4.jpeg',
+		thumbImage: 'https://www.htjpropertyservices.co.uk/images/kitchen-4.jpeg',
+	}];
 }
