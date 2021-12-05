@@ -12,13 +12,13 @@
 
         &:hover {
             p {
-                opacity: 1;
-                transition: all .7s ease-in-out;
+                opacity: 1!important;
+                transition: all .7s ease-in-out!important;
             }
 
             &::before {
-                transition: all .3s ease-in-out;
-                background-color: rgba(0,0,0,.7);
+                transition: all .3s ease-in-out!important;
+                background-color: rgba(0,0,0,.7)!important;
             }
         }
 

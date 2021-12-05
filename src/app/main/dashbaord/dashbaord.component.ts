@@ -8,10 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class DashbaordComponent implements OnInit {
 	
     loading: boolean = true;
-	home: boolean = false;
-	about: boolean = false;
-	gallery: boolean = false;
-	contact: boolean = false;
 
     error: any = null;
 
@@ -22,7 +18,5 @@ export class DashbaordComponent implements OnInit {
 
     ngOnInit(): void {
 		this.loading = false;
-		this.home = true;
-		
     }
 }

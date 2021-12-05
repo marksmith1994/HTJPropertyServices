@@ -1,14 +1,16 @@
-<div class="pull-out_block">
+<div class="pull-out_block" 
+    *ngFor="let block of blocks; let odd = odd;"
+    [ngClass]="{ 'reverse': odd}">
 
     <div class="image-container">
-        <img src="/assets/images/HTJ-Logo.svg" alt="Title">
+        <img src="{{block.image}}" alt="{{block.title}}">
     </div>
 
     <div class="content-container">
         <div class="content-container_inner">
-            <h3>Title</h3>
-            <p>Description</p>
-            <a href="" class="button black">Button Text</a>
+            <h3>{{block.title}}</h3>
+            <p>{{block.description}}</p>
+            <a href="{{block.buttonLink}}" class="button black">{{block.buttonText}}</a>
         </div>
     </div>
     

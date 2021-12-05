@@ -1,14 +1,14 @@
-<div class="products-group">
+<div class="products-group" >
 
-    <div class="product-item">
+    <div class="product-item" *ngFor="let block of blocks">
 
         <div class="image">
-            <img src="images/shower.jpeg" alt="Shower fitted by HTJ Property Services">
+            <img src="{{ block.image }}" alt="{{ block.title }}">
         </div>
 
         <div class="content">
-            <h3>Bathrooms</h3>
-            <p>A bathroom should be more than just a necessity - a place to unwind and relax. HTJ Property Services aim to create a truly beautiful bathroom experience, leaving you refreshed and energised.</p>
+            <h3>{{ block.title }}</h3>
+            <p>{{ block.description}}</p>
         </div>
 
     </div>

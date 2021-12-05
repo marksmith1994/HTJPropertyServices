@@ -2,6 +2,21 @@
     display: flex;
     margin: 150px 0;
 
+    &.reverse {
+        flex-direction: row-reverse;
+
+        .content-container_inner {
+            right: -20%;
+            left: unset!important;
+            transform: translate(20%,-120%)!important;
+            background-color: #6f665f!important;
+
+            h3, p{
+                color: #fff!important;;
+            }
+        }
+    }
+
     .image-container {
         width: 50%;
 
@@ -49,5 +64,4 @@
             }
         }
     }
-
 }
