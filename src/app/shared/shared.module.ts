@@ -10,6 +10,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { HeroComponent } from './hero/hero.component';
 import { ContactBoxComponent } from './contact-box/contact-box.component';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { ReactiveFormsModule } from '@angular/forms';  
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
     imports:[
@@ -22,7 +26,11 @@ import { NgImageSliderModule } from 'ng-image-slider';
         MatProgressSpinnerModule,
         CommonModule,
         MatIconModule,
-        NgImageSliderModule        
+        NgImageSliderModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule
     ],
     declarations:[
         HeaderComponent, 
@@ -30,7 +38,6 @@ import { NgImageSliderModule } from 'ng-image-slider';
         LoadingMaskComponent, 
         HeroComponent, 
         ContactBoxComponent
-        
     ],
     exports:[
         HeaderComponent,
@@ -40,7 +47,11 @@ import { NgImageSliderModule } from 'ng-image-slider';
         MatProgressSpinnerModule,
         MatIconModule,
         ContactBoxComponent,
-        NgImageSliderModule
+        NgImageSliderModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule
     ],
     providers:[]
 })

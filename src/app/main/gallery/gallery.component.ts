@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { InstagramArray, InstagramImages } from '../models/main.model';
+import { GalleryService } from '../services/gallery.service';
 
 @Component({
   selector: 'app-gallery',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
 
-  constructor() { }
+	images: InstagramArray | undefined;
+	token: string = '';
+	constructor(
+		private _galleryService: GalleryService
+	) {
+	}
 
-  ngOnInit(): void {
-  }
+	ngOnInit() {
+		this._galleryService.getInstagramGallery(this.token).subscribe({
+			next: result => {
+				this.images = result;
+			}
+		})
+	}
 
 }
