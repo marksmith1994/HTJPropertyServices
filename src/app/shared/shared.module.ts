@@ -9,11 +9,11 @@ import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { HeroComponent } from './hero/hero.component';
 import { ContactBoxComponent } from './contact-box/contact-box.component';
-import { NgImageSliderModule } from 'ng-image-slider';
 import { ReactiveFormsModule } from '@angular/forms';  
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { SlickCarouselModule } from 'ngx-slick-carousel';  
 
 @NgModule({
     imports:[
@@ -26,11 +26,11 @@ import { MatSelectModule } from '@angular/material/select';
         MatProgressSpinnerModule,
         CommonModule,
         MatIconModule,
-        NgImageSliderModule,
         ReactiveFormsModule,
         MatFormFieldModule,
         MatInputModule,
-        MatSelectModule
+        MatSelectModule,
+        SlickCarouselModule
     ],
     declarations:[
         HeaderComponent, 
@@ -47,11 +47,11 @@ import { MatSelectModule } from '@angular/material/select';
         MatProgressSpinnerModule,
         MatIconModule,
         ContactBoxComponent,
-        NgImageSliderModule,
         ReactiveFormsModule,
         MatFormFieldModule,
         MatInputModule,
-        MatSelectModule
+        MatSelectModule,
+        SlickCarouselModule
     ],
     providers:[]
 })

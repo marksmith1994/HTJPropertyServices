@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { GreetingComponent } from './home/greeting/greeting.component';
 import { InfoBlockComponent } from './home/info-block/info-block.component';
 import { AdvertBlockComponent } from './home/advert-block/advert-block.component';
+import { CarouselComponent } from './home/carousel/carousel.component';
 
 @NgModule({
     imports: [
@@ -23,7 +24,8 @@ import { AdvertBlockComponent } from './home/advert-block/advert-block.component
         HomeComponent,
         GreetingComponent,
         InfoBlockComponent,
-        AdvertBlockComponent
+        AdvertBlockComponent,
+        CarouselComponent
     ],
     exports: [
         AboutComponent,
