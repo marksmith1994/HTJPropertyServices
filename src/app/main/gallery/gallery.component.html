@@ -1,11 +1,25 @@
-<div class="gallery-container">
+<app-header></app-header>
 
-    <div class="image-container" *ngFor="let image of images?.data">
-        <img src="{{ image.media_url }}" alt="{{ image.caption }}" />
-        <div class="image-caption">
-            <p>{{ image.caption }}</p>
-            <a href="{{ image.permalink }}" target="_blank" class="button black">View</a>
-        </div>
-    </div>
+    <app-hero [title]="title"></app-hero>
 
-</div>
+    <app-loading-mask [loading]="loading" [error]="error">
+
+        <ng-template>
+            <div class="gallery-container">
+
+                <div class="image-container" *ngFor="let image of images?.data">
+                    <img src="{{ image.media_url }}" alt="{{ image.caption }}" />
+                    <div class="image-caption">
+                        <p>{{ image.caption }}</p>
+                        <a href="{{ image.permalink }}" target="_blank" class="button black">View</a>
+                    </div>
+                </div>
+
+            </div>
+        </ng-template>
+
+    </app-loading-mask>
+
+    <app-contact-box></app-contact-box>
+
+<app-footer></app-footer>

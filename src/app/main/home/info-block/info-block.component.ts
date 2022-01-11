@@ -6,6 +6,7 @@ import { InfoBlock } from '../../models/main.model';
   templateUrl: './info-block.component.html',
   styleUrls: ['./info-block.component.scss']
 })
+
 export class InfoBlockComponent implements OnInit{
 
 	blocks: InfoBlock[] = []

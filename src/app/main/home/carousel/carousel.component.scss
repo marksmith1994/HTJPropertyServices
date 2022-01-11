@@ -1,0 +1,54 @@
+.slick-slide {
+
+    img{
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        object-fit: cover;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.3);
+    }
+}
+
+.slick-active img{
+    animation: cssAnimation 10s ease-in-out forwards;
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    z-index: 1;
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    transition: none !important;
+
+    .h1{
+        font-size: 60px;
+    }
+
+    p{
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
+
+@keyframes cssAnimation {
+    from {
+        -webkit-transform: scale(1) translate(0px);
+    }
+    to {
+        -webkit-transform: scale(1.1) translate(0px);
+    }
+}

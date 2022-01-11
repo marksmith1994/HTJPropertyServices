@@ -13,7 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import { SlickCarouselModule } from 'ngx-slick-carousel';  
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { NavComponent } from './nav/nav.component';  
 
 @NgModule({
     imports:[
@@ -37,7 +38,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
         FooterComponent, 
         LoadingMaskComponent, 
         HeroComponent, 
-        ContactBoxComponent
+        ContactBoxComponent, 
+        NavComponent
     ],
     exports:[
         HeaderComponent,
@@ -51,7 +53,9 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
         MatFormFieldModule,
         MatInputModule,
         MatSelectModule,
-        SlickCarouselModule
+        SlickCarouselModule,
+        NavComponent,
+        HeroComponent
     ],
     providers:[]
 })

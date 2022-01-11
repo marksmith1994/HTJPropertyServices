@@ -9,19 +9,23 @@ import { GalleryService } from '../services/gallery.service';
 })
 export class GalleryComponent implements OnInit {
 
+	title: string = "Gallery";
 	images: InstagramArray | undefined;
 	token: string = '';
-	constructor(
-		private _galleryService: GalleryService
-	) {
+	loading: boolean = true;
+    error: any = null;
+	
+	constructor(private _galleryService: GalleryService) {
+		this.loading = true;
 	}
 
 	ngOnInit() {
+		this.loading = false;
 		this._galleryService.getInstagramGallery(this.token).subscribe({
 			next: result => {
 				this.images = result;
 			}
-		})
+		});
 	}
 
 }

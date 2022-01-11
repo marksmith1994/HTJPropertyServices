@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import { DashbaordComponent } from './dashbaord/dashbaord.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
 import { CommonModule } from '@angular/common';
@@ -19,7 +18,6 @@ import { CarouselComponent } from './home/carousel/carousel.component';
     declarations: [
         AboutComponent,
         ContactComponent,
-        DashbaordComponent,
         GalleryComponent,
         HomeComponent,
         GreetingComponent,
@@ -30,7 +28,6 @@ import { CarouselComponent } from './home/carousel/carousel.component';
     exports: [
         AboutComponent,
         ContactComponent,
-        DashbaordComponent,
         GalleryComponent,
         HomeComponent
     ]
