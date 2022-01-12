@@ -1,0 +1,17 @@
+<div class="container" 
+    *ngFor="let block of blocks; let odd = odd;"
+    [ngClass]="{ 'reverse': odd}">
+
+    <div class="image-container">
+        <img src="{{block.image}}" alt="{{block.title}}">
+    </div>
+
+    <div class="content-container">
+        <div class="content-inner">
+            <h3>{{block.title}}</h3>
+            <p>{{block.description}}</p>
+            <a href="{{block.buttonLink}}" class="button black">{{block.buttonText}}</a>
+        </div>
+    </div>
+    
+</div>

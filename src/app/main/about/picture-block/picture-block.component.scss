@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    align-items: center;
+
+    &.reverse {
+        flex-direction: row-reverse;
+    }
+    
+    .image-container{
+        width: 50%;
+        position: relative;
+        img {
+            width: 100%;
+            max-height: 600px;
+            object-fit: cover;
+        }
+    }
+
+    .content-container{            
+        width: 50%;
+        color: #000;
+        position: relative;
+
+        .content-inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 75%;
+        }
+    }
+}
