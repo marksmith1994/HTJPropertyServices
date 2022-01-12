@@ -14,7 +14,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
-import { NavComponent } from './nav/nav.component';  
+import { NavComponent } from './nav/nav.component';
+import { SocialIconsComponent } from './social-icons/social-icons.component';  
 
 @NgModule({
     imports:[
@@ -39,7 +40,8 @@ import { NavComponent } from './nav/nav.component';
         LoadingMaskComponent, 
         HeroComponent, 
         ContactBoxComponent, 
-        NavComponent
+        NavComponent, 
+        SocialIconsComponent
     ],
     exports:[
         HeaderComponent,
@@ -55,7 +57,8 @@ import { NavComponent } from './nav/nav.component';
         MatSelectModule,
         SlickCarouselModule,
         NavComponent,
-        HeroComponent
+        HeroComponent,
+        SocialIconsComponent
     ],
     providers:[]
 })

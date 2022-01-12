@@ -10,6 +10,7 @@ import { InfoBlockComponent } from './home/info-block/info-block.component';
 import { AdvertBlockComponent } from './home/advert-block/advert-block.component';
 import { CarouselComponent } from './home/carousel/carousel.component';
 import { PictureBlockComponent } from './about/picture-block/picture-block.component';
+import { ContactInfoComponent } from './contact/contact-info/contact-info.component';
 
 @NgModule({
     imports: [
@@ -25,7 +26,8 @@ import { PictureBlockComponent } from './about/picture-block/picture-block.compo
         InfoBlockComponent,
         AdvertBlockComponent,
         CarouselComponent,
-        PictureBlockComponent
+        PictureBlockComponent,
+        ContactInfoComponent
     ],
     exports: [
         AboutComponent,
