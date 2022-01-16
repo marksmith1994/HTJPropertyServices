@@ -37,7 +37,7 @@ export class CarouselComponent {
 		"dots": false,  
 		"infinite": true,
 		"autoplay": true,
-		"autoplaySpeed": 10000,
+		"autoplaySpeed": 5000,
 		"fade": true,
 		"cssEase": 'ease-in-out',
 		"touchThreshold": 100

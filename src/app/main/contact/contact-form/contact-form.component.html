@@ -1,1 +1,31 @@
-<p>contact-form works!</p>
+<h2>Want to know more?</h2>
+<p>Please fill out the form with your contact details and how we can help and a member of the team will get in touch as soon as we are able.</p>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <div class="full">
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Email address</mat-label>
+            <input matInput formControlName="emailAddress">
+        </mat-form-field>
+    </div>
+    <div class="full">
+        <mat-form-field appearance="fill">
+            <mat-label>Telephone number</mat-label>
+            <input matInput formControlName="telephoneNumber">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>What can we do for you?</mat-label>
+            <input matInput formControlName="subject">
+        </mat-form-field>
+    </div>
+    <mat-form-field appearance="fill">
+        <mat-label>Message</mat-label>
+        <textarea matInput formControlName="message"></textarea>
+    </mat-form-field>
+
+    <button type="submit" class="button black">Send Message</button>
+</form>

@@ -2,5 +2,13 @@
 
     <app-hero [title]="title"></app-hero>
 
-    <app-contact-info></app-contact-info>
+    <mat-grid-list cols="7">
+        <mat-grid-tile [colspan]="4" [rowspan]="3">
+            <app-contact-form></app-contact-form>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="3" [rowspan]="3">
+            <app-contact-info></app-contact-info>
+        </mat-grid-tile>
+    </mat-grid-list>
+
 <app-footer></app-footer>
