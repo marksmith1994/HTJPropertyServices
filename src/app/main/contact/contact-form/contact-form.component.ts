@@ -35,9 +35,11 @@ export class ContactFormComponent {
 		this.recaptchaV3Service.execute('importantAction').subscribe((token: string) => {
 		 	console.debug(`Token [${token}] generated`);
 		});
-
+		
+		let form = JSON.stringify(this.contactForm.value);
+		console.log(form);
 		if (this.contactForm.valid) {
-			this.http.post("/sendEmail.php", this.contactForm.value).subscribe();
+			this.http.post("/sendEmail.php", form).subscribe();
 		}
 	}
 }
