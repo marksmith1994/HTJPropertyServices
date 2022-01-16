@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { InstagramArray, InstagramImages } from '../models/main.model';
+import { environment } from 'src/environments/environment';
+import { InstagramArray } from '../models/main.model';
 import { GalleryService } from '../services/gallery.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class GalleryComponent implements OnInit {
 
 	title: string = "Gallery";
 	images: InstagramArray | undefined;
-	token: string = '';
+	token: string = environment.gallery.tokenKey;
 	loading: boolean = true;
     error: any = null;
 	

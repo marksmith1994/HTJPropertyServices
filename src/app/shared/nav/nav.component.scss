@@ -6,11 +6,15 @@ ul{
     justify-content: space-evenly;
 
     li{
-        margin: 1rem 1.5rem;
 
         a{
-            color: white;
+            color: #fff;
             text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
     }
 }
+

@@ -1,5 +1,8 @@
-.slick-slide {
+ngx-slick-carousel{
+    overflow: hidden;
+}
 
+.slick-slide {
     img{
         width: 100vw;
         height: 100vh;

@@ -17,6 +17,10 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { NavComponent } from './nav/nav.component';
 import { SocialIconsComponent } from './social-icons/social-icons.component';  
+import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from 'ng-recaptcha';
+import { environment } from 'src/environments/environment';
+import { GalleryComponent } from "../main/gallery/gallery.component";
+import { FormsModule }   from '@angular/forms';
 
 @NgModule({
     imports:[
@@ -34,7 +38,9 @@ import { SocialIconsComponent } from './social-icons/social-icons.component';
         MatInputModule,
         MatSelectModule,
         SlickCarouselModule,
-        MatGridListModule
+        MatGridListModule,
+        RecaptchaV3Module,
+        FormsModule
     ],
     declarations:[
         HeaderComponent, 
@@ -61,9 +67,21 @@ import { SocialIconsComponent } from './social-icons/social-icons.component';
         NavComponent,
         HeroComponent,
         SocialIconsComponent,
-        MatGridListModule
+        MatGridListModule,
+        HttpClientModule,
+        RecaptchaV3Module,
+        FormsModule
     ],
-    providers:[]
+    providers:[
+        {
+            provide: RECAPTCHA_V3_SITE_KEY,
+            useValue: environment.recaptcha.siteKey,
+        },
+        {
+            provide: GalleryComponent,
+            useValue: environment.gallery.tokenKey
+        }
+    ]
 })
 
 export class SharedModule { }
