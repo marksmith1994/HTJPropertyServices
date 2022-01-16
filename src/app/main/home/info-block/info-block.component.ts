@@ -15,7 +15,7 @@ export class InfoBlockComponent implements OnInit{
 		let blockOne = ({
 			title: "Find out more",
 			description: "About HTJ Property Services and see what makes us unique and perfect for any job you require. Check out our reviews and what makes us great!",
-			image: "/assets/images/HTJ-Logo.svg",
+			image: "/assets/images/home/van.jpg",
 			buttonText: "About us",
 			buttonLink: "/about"
 		});
@@ -23,7 +23,7 @@ export class InfoBlockComponent implements OnInit{
 		let blockTwo = ({
 			title: "View our work",
 			description: "Check out our latest work in our Gallery for inspiration - we have a broad range of experience doing all sorts of property services to a high standard. Click to see more examples of our expert craftsmanship.",
-			image: "/assets/images/HTJ-Logo.svg",
+			image: "/assets/images/home/bathroom.jpg",
 			buttonText: "View gallery",
 			buttonLink: "/gallery"
 		});

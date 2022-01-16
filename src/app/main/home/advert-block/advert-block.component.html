@@ -3,7 +3,7 @@
     <div class="product-item" *ngFor="let block of blocks">
 
         <div class="image">
-            <img src="{{ block.image }}" alt="{{ block.title }}">
+            <img loading="lazy" src="{{ block.image }}" alt="{{ block.title }}">
         </div>
 
         <div class="content">
