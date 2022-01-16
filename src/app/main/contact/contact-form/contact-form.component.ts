@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { FormBuilder, NgForm  } from '@angular/forms';
+import { FormBuilder  } from '@angular/forms';
 import { ReCaptchaV3Service } from 'ng-recaptcha';
-import { ContactService } from '../../services/contact.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact-form',
@@ -11,9 +11,9 @@ import { ContactService } from '../../services/contact.service';
 export class ContactFormComponent {
 
 	constructor(
-		private contactService: ContactService,
 		private formBuilder: FormBuilder,
-		private recaptchaV3Service: ReCaptchaV3Service
+		private recaptchaV3Service: ReCaptchaV3Service,
+		private http: HttpClient
 	) {}
 
 	contactForm = this.formBuilder.group({
@@ -35,16 +35,9 @@ export class ContactFormComponent {
 		this.recaptchaV3Service.execute('importantAction').subscribe((token: string) => {
 		 	console.debug(`Token [${token}] generated`);
 		});
-		
-		this.contactService.PostMessage(this.contactForm.value).subscribe(
-		response => {
-			location.href = 'https://mailthis.to/confirm'
-			console.log("hello " + response)
-			this.contactForm.reset();
-		}, error => {
-			console.warn(error.responseText)
-			console.log("error" + { error })
-		})
-	}
 
+		if (this.contactForm.valid) {
+			this.http.post("/sendEmail.php", this.contactForm.value).subscribe();
+		}
+	}
 }
