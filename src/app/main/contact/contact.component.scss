@@ -2,3 +2,13 @@ mat-grid-list{
     width: 75%;
     margin: 0px auto;
 }
+
+.contact-container{
+    display: flex;
+    width: 80%;
+    margin: 100px auto;
+
+    app-contact-form{
+        margin-right: 15px;
+    }
+}

@@ -45,3 +45,6 @@ testem.log
 .DS_Store
 Thumbs.db
 src/app/main/gallery/gallery.component.ts
+
+# Files containing API keys
+src/environments
