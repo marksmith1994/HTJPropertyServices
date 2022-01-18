@@ -7,7 +7,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class ContactComponent implements OnInit {
 
-	title: string = "Contact us";
+	title: string = "Contact";
 
   	constructor(
 		private titleService: Title, 
@@ -15,7 +15,7 @@ export class ContactComponent implements OnInit {
 	{}
 
 	ngOnInit() {
-		this.titleService.setTitle("About | HTJ Property Services, Bridgend, South Wales");
+		this.titleService.setTitle("Contact | HTJ Property Services, Bridgend, South Wales");
 		this.metaService.addTags([
 		  {name: 'keywords', content: 'Bathroom, Kitchen, Renovations, Plumbing, Tiling, General, Property, Developments, Services'},
 		  {name: 'description', content: 'HTJ Property Services, working in South Wales Bridgend, recently completed jobs including, kitchen fittings, bathroom fittings, plumbing, tiling. For all your bridgend Property Maintence needs.'},

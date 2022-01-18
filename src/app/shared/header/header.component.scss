@@ -20,3 +20,75 @@ header{
     }
 
 }
+
+.mobile-nav{
+    display: none;
+
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
+}
+
+.main-nav{
+    display: block;
+
+    ul{
+        display: flex;
+        list-style: none;
+        padding: 0;
+        align-items: center;
+        justify-content: space-evenly;
+    
+        li{
+    
+            a{
+                color: #fff;
+                text-decoration: none;
+                margin: 0 15px;
+                font-size: 18px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+        }
+    }  
+
+    @media screen and (max-width: 768px) {
+        nav{
+            display: none;
+        }
+
+        nav.change{
+            display: block;
+            ul{
+                flex-direction: column;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: #6f665f;
+                margin: 0;
+            }
+        }
+
+        .bar1, .bar2, .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: #fff;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+            
+        .change .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+            
+        .change .bar2 {opacity: 0;}
+            
+        .change .bar3 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+    }
+}

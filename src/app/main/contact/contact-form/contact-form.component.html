@@ -1,31 +1,40 @@
-<h2>Want to know more?</h2>
-<p>Please fill out the form with your contact details and how we can help and a member of the team will get in touch as soon as we are able.</p>
+<div class="" *ngIf="!success">
 
-<form [formGroup]="contactForm" #contact="ngForm" (ngSubmit)="onSubmit()">
-    <div class="full">
-        <mat-form-field appearance="fill">
-            <mat-label>Name</mat-label>
-            <input matInput formControlName="name" required>
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-            <mat-label>Email address</mat-label>
-            <input matInput formControlName="emailAddress" required>
-        </mat-form-field>
-    </div>
-    <div class="full">
-        <mat-form-field appearance="fill">
-            <mat-label>Telephone number</mat-label>
-            <input matInput formControlName="telephoneNumber">
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-            <mat-label>What can we do for you?</mat-label>
-            <input matInput formControlName="subject" required>
-        </mat-form-field>
-    </div>
-    <mat-form-field appearance="fill">
-        <mat-label>Message</mat-label>
-        <textarea matInput formControlName="message" required></textarea>
-    </mat-form-field>
+    <h2>Want to know more?</h2>
+    <p>Please fill out the form with your contact details and how we can help and a member of the team will get in touch as soon as we are able.</p>
 
-    <button type="submit" class="button black">Send Message</button>
-</form>
+    <form [formGroup]="contactForm" #contact="ngForm" (ngSubmit)="onSubmit()">
+        <div class="full">
+            <mat-form-field appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" required>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Email address</mat-label>
+                <input matInput formControlName="emailAddress" required>
+            </mat-form-field>
+        </div>
+        <div class="full">
+            <mat-form-field appearance="fill">
+                <mat-label>Telephone number</mat-label>
+                <input matInput formControlName="telephoneNumber">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>What can we do for you?</mat-label>
+                <input matInput formControlName="subject" required>
+            </mat-form-field>
+        </div>
+        <mat-form-field appearance="fill">
+            <mat-label>Message</mat-label>
+            <textarea matInput formControlName="message" required></textarea>
+        </mat-form-field>
+
+        <button type="submit" class="button black">Send Message</button>
+    </form>    
+
+</div>
+
+<div class="" *ngIf="success">
+    
+    <h2>Thank you, someone will be in touch shortly!</h2>
+</div>

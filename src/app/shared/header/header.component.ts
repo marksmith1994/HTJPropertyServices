@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  status: boolean = false;
+  
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  
+  clickEvent(){
+    this.status = !this.status;       
+  }
 }

@@ -1,11 +1,24 @@
 <header>
     
     <div class="main-logo">
-        <a href="/"><img alt="HTJ Property Service Logo" src="\assets\images\HTJ-Logo.svg" /></a>
+        <a href="/"><img loading="lazy" alt="HTJ Property Service Logo" src="\assets\images\HTJ-Logo.svg" /></a>
     </div>
 
     <div class="main-nav"> 
-        <app-nav></app-nav>
+        <nav [ngClass]="status ? 'change' : ''">
+            <ul>
+                <li><a href="/" >Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/gallery" >Gallery</a></li>
+                <li><a href="/contact" >Contact Us</a></li>
+            </ul>
+        </nav>   
+        <div class="container"  (click)="status=!status"  
+        [ngClass]="status ? 'change' : ''">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
     </div>
 
 </header>

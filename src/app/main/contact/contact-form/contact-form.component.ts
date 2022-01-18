@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent {
-
+	success: boolean = false;
 	constructor(
 		private formBuilder: FormBuilder,
 		private recaptchaV3Service: ReCaptchaV3Service,
@@ -37,9 +37,10 @@ export class ContactFormComponent {
 		});
 		
 		let form = JSON.stringify(this.contactForm.value);
-		console.log(form);
 		if (this.contactForm.valid) {
-			this.http.post("/sendEmail.php", form).subscribe();
+			this.http.post("/sendEmail.php", form).subscribe({
+				next: () => { this.success = true}
+			});
 		}
 	}
 }

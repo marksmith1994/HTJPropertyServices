@@ -8,7 +8,17 @@ mat-grid-list{
     width: 80%;
     margin: 100px auto;
 
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        margin: 25px auto;
+        width: 80%;
+    }
+
     app-contact-form{
-        margin-right: 15px;
+        margin: 0 50px 0 0;
+        
+        @media screen and (max-width: 768px) {
+            margin: 15px 0;
+        }
     }
 }

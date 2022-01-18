@@ -27,7 +27,7 @@ export class CarouselComponent {
 		{ 
 			img: "assets/images/slider/kitchen-2.jpg", 
 			title: "HTJ Property Services", 
-			content: "HTJ Property Services are dedicated to making your visions a reality. A locally run business from Bridgend, South Wales, HTJ Property Services cover all property needs from Tiling, Kitchens, Bathrooms and General building services. We aim to satisfy every one of our customers by being reliable and professional. We will discuss your requirements, offer advice on how to achieve the best results and provide you with a competitive price." 
+			content: "HTJ Property Services are dedicated to making your visions a reality. A locally run business from Bridgend, South Wales, HTJ Property Services cover all property needs from Tiling, Kitchens, Bathrooms and General building services. We aim to satisfy every one of our customers by being reliable and professional." 
 		}
 	];  
 	  

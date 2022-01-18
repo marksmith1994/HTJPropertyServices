@@ -15,7 +15,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
-import { NavComponent } from './nav/nav.component';
 import { SocialIconsComponent } from './social-icons/social-icons.component';  
 import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from 'ng-recaptcha';
 import { environment } from 'src/environments/environment';
@@ -48,7 +47,6 @@ import { FormsModule }   from '@angular/forms';
         LoadingMaskComponent, 
         HeroComponent, 
         ContactBoxComponent, 
-        NavComponent, 
         SocialIconsComponent
     ],
     exports:[
@@ -64,7 +62,6 @@ import { FormsModule }   from '@angular/forms';
         MatInputModule,
         MatSelectModule,
         SlickCarouselModule,
-        NavComponent,
         HeroComponent,
         SocialIconsComponent,
         MatGridListModule,

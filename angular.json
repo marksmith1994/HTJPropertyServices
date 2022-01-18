@@ -32,7 +32,12 @@
               "src/robots.txt",
               "src/sitemap.xml",
               "src/sendEmail.php",
-              "src/googlee24d2db0bafb7558.html"
+              "src/googlee24d2db0bafb7558.html",
+              "src/android-chrome-192x192.png",
+              "src/android-chrome-512x512.png",
+              "src/apple-touch-icon.png",
+              "src/favicon-16x16.png",
+              "src/favicon-32x32.png"
             ],
             "styles": [
               "src/styles.scss",
@@ -49,12 +54,12 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "750mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
+                  "maximumWarning": "2.5kb",
                   "maximumError": "4kb"
                 }
               ],

@@ -33,6 +33,7 @@ export class GalleryComponent implements OnInit {
 		  {name: 'robots', content: 'index, follow'},
 		  {name: 'Content-Type', content: 'text/html; charset=utf-8' }
 		]);
+		
 		this._galleryService.getInstagramGallery(this.token).subscribe({
 			next: result => {
 				this.images = result;
